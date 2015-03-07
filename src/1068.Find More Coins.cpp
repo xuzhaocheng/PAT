@@ -4,7 +4,8 @@
 ** dp[i][j] = max(dp[i-1][j], dp[i-1][j-coins[i-1]]+coins[i-1])
 ** 最后dp[n][m]如果等于m则有解，否则无解。
 ** 用choice数组来记录选取的硬币
-** choice[i][j]表示第i个硬币是否在dp[i][j]中被选入，也就是是否在前i个硬币
+** choice[i][j]表示第i个硬币是否在dp[i][j]中被选入，1表示前i个硬币中选出的一组面值最大且不超过j
+** 的硬币中包含了第i个硬币，0表示不包含。
 */
 #include <iostream>
 #include <vector>
