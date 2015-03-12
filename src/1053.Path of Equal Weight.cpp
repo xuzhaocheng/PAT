@@ -1,3 +1,7 @@
+/*
+** 将每个结点的孩子结点按照孩子结点的权值降序排序
+** 然后再遍历得到的结果就是按照题目要求有序的
+*/
 #include <iostream>
 #include <vector>
 #include <string>
@@ -39,7 +43,7 @@ void traverse(const vector<int> &w, const vector<vector<int> > &leaves, int node
 }
 
 int main(void) {
-	freopen("../in/1053.in", "r", stdin);
+	// freopen("../in/1053.in", "r", stdin);
 	int n, m, s;
 	cin >> n >> m >> s;
 
