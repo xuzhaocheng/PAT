@@ -19,7 +19,7 @@
 using namespace std;
 
 int main(void) {
-	// freopen("../in/1068.in", "r", stdin);
+	freopen("../in/1068.in", "r", stdin);
 
 	int n, m;
 	cin >> n >> m;
@@ -28,6 +28,7 @@ int main(void) {
 	for (int i = 0; i < n; i++) 
 		cin >> coins[i];
 
+	// 降序排
 	std::sort(coins.begin(), coins.end(), greater<int>());
 
 	vector<vector<int> > dp(n+1, vector<int>(m+1));
@@ -53,6 +54,8 @@ int main(void) {
 		vector<int> res;
 
 		int k = n, v = m;
+		// 从下标大的（数值小）开始找
+		// 每次加入结果的是前k个硬币中选出的一组面值最大且不超过v的硬币中的面值最小的硬币
 		while (k > 0) {
 			if (choice[k][v] == 1) {
 				res.push_back(coins[k-1]);
