@@ -94,7 +94,7 @@ AVLNode *insertNode(AVLNode *root, int value) {
 }
 
 int main(void) {
-	freopen("../in/1066.in", "r", stdin);
+	// freopen("../in/1066.in", "r", stdin);
 	
 	int n;
 	cin >> n;
